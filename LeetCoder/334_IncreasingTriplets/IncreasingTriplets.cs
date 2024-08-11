@@ -19,7 +19,7 @@ public static class IncreasingTriplets
             else if (num <= secondSmallest)
                 secondSmallest = num;
             else
-                return true; // It does not identify the indexes for the tiplet it ensures it exists 
+                return true; // It does not identify the indexes for the triplet it ensures it exists 
         }
 
         return false;

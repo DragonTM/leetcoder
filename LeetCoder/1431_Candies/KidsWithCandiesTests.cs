@@ -8,7 +8,7 @@ public class KidsWithCandiesTests
     [TestCase(new int []{12,1,12}, 10, new bool[] {true,false,true})]
     public void TestKidsWithCandies(int[] candies, int extraCandies, bool[] result)
     {
-        var kidsWithCandies = KidsWithCandies.Get(candies, extraCandies);
+        var kidsWithCandies = KidsCandies.Get(candies, extraCandies);
         
         Assert.That(kidsWithCandies, Is.EquivalentTo(result));
     }

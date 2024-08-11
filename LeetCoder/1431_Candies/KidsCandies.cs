@@ -1,6 +1,6 @@
 namespace LeetCoder._1431_Candies;
 
-public static class KidsWithCandies
+public static class KidsCandies
 {
     public static IList<bool> Get(int[] candies, int extraCandies)
     {
