@@ -19,30 +19,27 @@ public static class MaxContainer
     //
     //     return volume;
     // }
-    
+
     public static int MaxArea(int[] height)
     {
-        var volume = (height.Length - 1) * Math.Min(height[0], height[^1]);
-        var r = 0;
-        var l = height.Length - 1;
-    
-        while (r < l)
+        var maxVolume = 0;
+        var l = 0;
+        var r = height.Length - 1;
+
+        while (l < r)
         {
-            var volume1 = (l - r - 1) * Math.Min(height[r + 1], height[l]);
-            var volume2 = (l - r - 1) * Math.Min(height[r], height[l - 1]);
-    
-            volume = new[] { volume1, volume2, volume }.Max();
-    
-            if (volume1 > volume2)
+            maxVolume = Math.Max((r - l) * Math.Min(height[l], height[r]), maxVolume);
+
+            if (height[l] < height[r])
             {
-                r++;
+                l++;
             }
             else
             {
-                l--;
+                r--;
             }
         }
-    
-        return volume;
+
+        return maxVolume;
     }
 }
